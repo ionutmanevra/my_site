@@ -55,28 +55,30 @@ title {
 header {
     background-color: #0288d1;
     color: rgb(186, 13, 13);
-    padding: 1.5em 0;
+    padding: 0.25em 0;
     text-align: center;
     box-shadow: 0 4px 2px -2px gray;
     position: relative;
+    font-size: 0.9em;
+    border-bottom: 3px solid #0277bd;
 }
 
 nav {
     display: flex;
     justify-content: center;
-    gap: 1em;
+    gap: 0.5em;
 }
 
 nav button {
     background-color: #0288d1;
     color: white;
     border: 2px solid rgb(56, 59, 236);
-    font-size: larger;
-    padding: 1em 2em;
-    margin-left: 0.5em;
+    font-size: medium;
+    padding: 0.5em 1em;
+    margin-left: 0.25em;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    border-radius: 8px;
+    border-radius: 4px;
 }
 
 nav button:hover {
