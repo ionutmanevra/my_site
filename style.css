@@ -1,13 +1,55 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes HomePageAnimation {
+    0% {
+        transform: scale(1);
+        color: aqua;
+    }
+    50% {
+        transform: scale(1.2);
+        color: #0288d1;
+    }
+    100% {
+        transform: scale(1);
+        color: aqua;
+    }
+}
+
+@keyframes buttonPress {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.button-press {
+    animation: buttonPress 0.2s ease-in-out;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     background-color: rgb(57, 57, 176);
     color: #333;
+    animation: fadeIn 2s ease-in-out;
 }
 
 title {
     color: aqua;
+    animation: titleAnimation 3s infinite;
 }
 
 header {
@@ -46,7 +88,7 @@ nav button:hover {
     top: 10px;
     right: 20px;
     font-size: 1.2em;
-    border:2px solid #333;
+    border: 2px solid #333;
     color: white;
     border-radius: 8px;
 }
@@ -78,19 +120,10 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 0.5em 0; /* Reduced padding */
+    padding: 0.5em 0;
     font-size: 0.8em;
     position: fixed;
     width: 100%;
     bottom: 0;
     box-shadow: 0 -4px 2px -2px gray;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
 }

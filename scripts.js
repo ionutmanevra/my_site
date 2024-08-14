@@ -14,16 +14,26 @@ function showSection(sectionId) {
     });
 }
 
+function addButtonPressAnimation(button) {
+    button.classList.add('button-press');
+    setTimeout(() => {
+        button.classList.remove('button-press');
+    }, 200);
+}
+
 document.getElementById('homeButton').addEventListener('click', function() {
     showSection('homepage');
+    addButtonPressAnimation(this);
 });
 
 document.getElementById('aboutButton').addEventListener('click', function() {
     showSection('about');
+    addButtonPressAnimation(this);
 });
 
 document.getElementById('projectsButton').addEventListener('click', function() {
     showSection('projects');
+    addButtonPressAnimation(this);
 });
 
 setInterval(updateClock, 1000);
