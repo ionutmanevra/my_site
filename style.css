@@ -1,0 +1,96 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(57, 57, 176);
+    color: #333;
+}
+
+title {
+    color: aqua;
+}
+
+header {
+    background-color: #0288d1;
+    color: rgb(186, 13, 13);
+    padding: 1.5em 0;
+    text-align: center;
+    box-shadow: 0 4px 2px -2px gray;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+nav button {
+    background-color: #0288d1;
+    color: white;
+    border: 2px solid rgb(56, 59, 236);
+    font-size: larger;
+    padding: 1em 2em;
+    margin-left: 0.5em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 8px;
+}
+
+nav button:hover {
+    background-color: #0277bd;
+}
+
+#clock {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.2em;
+    border:2px solid #333;
+    color: white;
+    border-radius: 8px;
+}
+
+main {
+    padding: 2em;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+h2 {
+    color: #0288d1;
+}
+
+section {
+    margin-bottom: 2em;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 1.5em;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 0.5em 0; /* Reduced padding */
+    font-size: 0.8em;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -4px 2px -2px gray;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
