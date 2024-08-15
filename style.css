@@ -35,7 +35,7 @@
 }
 
 .button-press {
-    animation: buttonPress 0.2s ease-in-out;
+    animation: buttonPress 0.2s forwards;
 }
 
 body {
