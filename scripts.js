@@ -36,5 +36,15 @@ document.getElementById('projectsButton').addEventListener('click', function() {
     addButtonPressAnimation(this);
 });
 
+document.getElementById('themeToggle').addEventListener('click', function() {
+    document.body.classList.toggle('dark-mode');
+    document.querySelector('header').classList.toggle('dark-mode');
+    document.querySelector('main').classList.toggle('dark-mode');
+    document.querySelector('footer').classList.toggle('dark-mode');
+    document.querySelectorAll('h1, h2').forEach(el => el.classList.toggle('dark-mode'));
+    document.querySelectorAll('nav button').forEach(el => el.classList.toggle('dark-mode'));
+    this.classList.toggle('dark-mode');
+});
+
 setInterval(updateClock, 1000);
 updateClock();
