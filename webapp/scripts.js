@@ -21,6 +21,8 @@ function addButtonPressAnimation(button) {
     }, 200);
 }
 
+
+
 document.getElementById('homeButton').addEventListener('click', function() {
     showSection('homepage');
     addButtonPressAnimation(this);
@@ -33,6 +35,11 @@ document.getElementById('aboutButton').addEventListener('click', function() {
 
 document.getElementById('projectsButton').addEventListener('click', function() {
     showSection('projects');
+    addButtonPressAnimation(this);
+});
+
+document.getElementById('contactButton').addEventListener('click', function() {
+    showSection('contact');
     addButtonPressAnimation(this);
 });
 
