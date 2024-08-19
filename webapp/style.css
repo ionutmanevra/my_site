@@ -66,30 +66,6 @@ header.dark-mode {
     border-bottom: 3px solid #444;
 }
 
-#themeToggle {
-    background-color: #ff6f61;
-    color: white;
-    border: none;
-    font-size: 1em;
-    padding: 0.5em;
-    cursor: pointer;
-    border-radius: 50%;
-    margin-left: 1em;
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-#themeToggle.dark-mode {
-    background-color: #444;
-}
-
-#themeToggle:hover {
-    background-color: #ff4b3e;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-}
-
-
 nav {
     display: flex;
     justify-content: center;
@@ -143,8 +119,6 @@ nav button:active {
     transform: translateY(0);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
-
 
 #clock {
     position: absolute;
@@ -230,7 +204,6 @@ section h2 form button {
     color: white;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
     padding: 1em 2em;
     font-size: 1.2em;
     align-self: flex-start;
@@ -238,9 +211,14 @@ section h2 form button {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-
+section h2 form button:hover {
+    background-color: #ff4b3e;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
 
 footer {
     background-color: #333;
@@ -258,4 +236,59 @@ footer {
 footer.dark-mode {
     background-color: #1e1e1e;
     color: #e0e0e0;
+}
+
+#themeToggle {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    font-size: 1em;
+    padding: 0.5em;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-left: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#themeToggle.dark-mode {
+    background-color: #444;
+}
+
+#themeToggle:hover {
+    background-color: #ff4b3e;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 0.5em 0;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+
+    nav button {
+        width: 100%;
+        margin: 0;
+    }
+
+    #clock {
+        position: static;
+        margin-top: 1em;
+    }
+
+    main {
+        padding: 1em;
+        margin: 1em;
+    }
+
+    footer {
+        font-size: 0.8em;
+        padding: 0.5em 0;
+    }
 }
