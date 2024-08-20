@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 @keyframes fadeIn {
     from {
@@ -33,7 +33,7 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f0f2f5;
@@ -48,7 +48,7 @@ body.dark-mode {
 
 header {
     background-color: #ff6f61;
-    color: white;
+    background: linear-gradient(135deg, #ff6f61, #ff4b3e);
     padding: 1em 0;
     text-align: center;
     box-shadow: 0 4px 2px -2px gray;
