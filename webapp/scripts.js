@@ -67,7 +67,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
     }
 });
 
-document.getElementById('themeToggle').addEventListener('click', function() {
+document.querySelector('#themeToggle').addEventListener('click', function() {
     document.body.classList.toggle('dark-mode');
     document.querySelector('header').classList.toggle('dark-mode');
     document.querySelector('main').classList.toggle('dark-mode');
@@ -75,6 +75,39 @@ document.getElementById('themeToggle').addEventListener('click', function() {
     document.querySelectorAll('h1, h2').forEach(el => el.classList.toggle('dark-mode'));
     document.querySelectorAll('nav button').forEach(el => el.classList.toggle('dark-mode'));
     this.classList.toggle('dark-mode');
+
+    // Trigger scroll event to apply the correct gradient
+    window.dispatchEvent(new Event('scroll'));
+});
+
+window.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY;
+    const maxScroll = document.body.scrollHeight - window.innerHeight;
+    const scrollPercentage = scrollPosition / maxScroll;
+
+    const lightStartColor = [255, 111, 97]; // #ff6f61
+    const lightMidColor = [255, 140, 0]; // #ff8c00
+    const lightEndColor = [255, 75, 62]; // #ff4b3e
+
+    const darkStartColor = [26, 26, 26]; // #1a1a1a
+    const darkEndColor = [51, 51, 51]; // #333
+
+    const interpolateColor = (start, end, percentage) => {
+        return start.map((startValue, index) => {
+            const endValue = end[index];
+            return Math.round(startValue + (endValue - startValue) * percentage);
+        });
+    };
+
+    if (document.body.classList.contains('dark-mode')) {
+        const newColor1 = interpolateColor(darkStartColor, darkEndColor, scrollPercentage);
+        const newColor2 = interpolateColor(darkEndColor, darkStartColor, scrollPercentage);
+        document.body.style.background = `linear-gradient(135deg, rgb(${newColor1.join(',')}), rgb(${newColor2.join(',')}))`;
+    } else {
+        const newColor1 = interpolateColor(lightStartColor, lightMidColor, scrollPercentage);
+        const newColor2 = interpolateColor(lightMidColor, lightEndColor, scrollPercentage);
+        document.body.style.background = `linear-gradient(135deg, rgb(${newColor1.join(',')}), rgb(${newColor2.join(',')}))`;
+    }
 });
 
 setInterval(updateClock, 1000);
