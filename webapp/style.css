@@ -32,6 +32,10 @@
     }
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -47,7 +51,7 @@ body.dark-mode {
     background: linear-gradient(135deg, #2c3e50, #4b79a1);
     color: #e0e0e0;
     position: relative;
-    overflow: auto; /* Ensure scrolling is enabled */
+    overflow: auto;
 }
 
 body.dark-mode::before {
@@ -68,12 +72,12 @@ body.dark-mode * {
 }
 
 header.dark-mode, main.dark-mode, footer.dark-mode {
-    background: none; /* Ensure these elements do not override the body background */
-    color: inherit; /* Inherit color from body */
+    background: none;
+    color: inherit; 
 }
 
 h1.dark-mode, h2.dark-mode {
-    color: #e0e0e0; /* Ensure headings are visible in dark mode */
+    color: #e0e0e0;
 }
 
 nav button.dark-mode {
@@ -221,56 +225,174 @@ ul {
     padding-left: 1.5em;
 }
 
-section h2 form {
+.progress-bar {
+    background-color: #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 0.5em;
+    height: 1em;
+}
+
+.progress {
+    background-color: #4caf50;
+    height: 100%;
+    text-align: center;
+    line-height: 1em;
+    color: white;
+    border-radius: 8px;
+}
+
+section#projects {
+    display: none;
+}
+
+section#projects h2 {
+    color: #ff6f61;
+}
+
+section#projects .project-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 2em;
+    margin-top: 1em;
+}
+
+section#projects .project-photo {
+    max-width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section#projects .project-checklist {
+    list-style-type: disc;
+    padding-left: 1.5em;
+}
+
+section#projects .project-checklist a {
+    color: #ff6f61;
+    text-decoration: none;
+}
+
+section#projects .project-checklist a:hover {
+    text-decoration: underline;
+}
+
+section#projects .progress-bar {
+    background-color: #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 0.5em;
+    height: 1em;
+}
+
+section#projects .progress {
+    background-color: #4caf50;
+    height: 100%;
+    text-align: center;
+    line-height: 1em;
+    color: white;
+    border-radius: 8px;
+}
+
+.about-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 2em;
+    margin-top: 1em;
+}
+
+.about-photo {
+    max-width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+.about-text h3 {
+    margin-top: 1em;
+    color: #ff6f61;
+}
+
+.about-text ul {
+    list-style-type: disc;
+    padding-left: 1.5em;
+}
+
+.about-text a {
+    color: #ff6f61;
+    text-decoration: none;
+}
+
+.about-text a:hover {
+    text-decoration: underline;
+}
+
+form {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 1em;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
 }
 
-section h2 form textarea {
-    resize: vertical;
-    min-height: 30px;
-    max-height: 150px;
+form label {
+    margin-bottom: 0.5em;
+    font-weight: 700;
 }
 
-section h2 form button {
+form input, form textarea {
+    padding: 0.75em;
+    margin-bottom: 1em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    background-color: #f9f9f9;
+}
+
+form button {
     background-color: #ff6f61;
     color: white;
     border: none;
+    padding: 0.75em 1.5em;
     cursor: pointer;
-    padding: 1em 2em;
-    font-size: 1.2em;
-    align-self: flex-start;
-    border-radius: 4px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: relative;
-    overflow: hidden;
+    border-radius: 8px;
+    font-size: 1em;
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    align-self: flex-end;
 }
 
-section h2 form button:hover {
+form button:hover {
     background-color: #ff4b3e;
     transform: translateY(-2px);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
+
+
+
 footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 1em 0;
-    font-size: 0.9em;
+    padding: 0.7em;
+    font-size: 0.7em;
     position: fixed;
     width: 100%;
     bottom: 0;
     box-shadow: 0 -4px 2px -2px gray;
     animation: slideIn 1s ease-in-out;
+    
 }
 
 footer.dark-mode {
     background-color: #1e1e1e;
     color: #e0e0e0;
+    padding: 0.7em;
+    font-size: 0.7em;
+    position: fixed;
 }
 
 #themeToggle {

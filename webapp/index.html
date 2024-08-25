@@ -3,37 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A personal portfolio website showcasing my projects and skills in programming.">
+    <title>Welcome to My Programming Journey</title>
     <link rel="stylesheet" href="style.css">
-    <title>Welcome to my presentation website</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
 </head>
 <body>
     <header>
-        <button id="themeToggle">🌓</button>
-        <nav>
-            <button id="homeButton">Home</button>
-            <button id="projectsButton">My Projects</button>
-            <button id="aboutButton">About Me</button>
-            <button id="contactButton">Contact me</button>
+        <button id="themeToggle" aria-label="Toggle Dark Mode">🌓</button>
+        <nav aria-label="Main Navigation">
+            <button id="homeButton" aria-label="Home Section">Home</button>
+            <button id="projectsButton" aria-label="Projects Section">My Projects</button>
+            <button id="aboutButton" aria-label="About Section">About Me</button>
+            <button id="contactButton" aria-label="Contact Section">Contact Me</button>
         </nav>
-        <div id="clock"></div>
+        <div id="clock" aria-label="Current Time"></div>
     </header>
     <main>
         <section id="homepage">
             <h1>Welcome to My Programming Journey</h1>
             <p>This is where I will list my ongoing projects.</p>
-            <img src="computer-program-coding-screen_53876-138060.jpg.avif" alt="Computer screen with code" style="max-width: 100%; height: auto; border-radius: 8px;">
+            <img src="computer-program-coding-screen_53876-138060.jpg.avif" alt="Computer screen with code" loading="lazy">
         </section>
         <section id="about" style="display: none;">
             <h2>About Me</h2>
-            <p>👋 Hi, I am Ionut. 👀 I am interested in exploring new technologies and their applications in real-world scenarios. 🌱 I am currently learning Python and React Native. I am looking to collaborate on innovative projects that merge technology with social impact. 📫 How to reach me: Feel free to drop me a message here or reach out via email at ionu2044@gmail.com. ⚡ Fun fact: Initially, I aspired to attend med school before venturing into the world of technology,during the pandemic.
-            </p>
+            <p>👋 Hi, I am Ionut. 👀 I am interested in exploring new technologies and their applications in real-world scenarios. 🌱 I am currently learning Python and React Native. I am looking to collaborate on innovative projects that merge technology with social impact. 📫 How to reach me: Feel free to drop me a message here or reach out via email at ionu2044@gmail.com. ⚡ Fun fact: Initially, I aspired to attend med school before venturing into the world of technology, during the pandemic.</p>
+            <img src="c_wave.jpg" alt="introduction-picture" loading="lazy">
         </section>
         <section id="projects" style="display: none;">
             <h2>My Ongoing Projects</h2>
+            <div class="project-content">
+                <img src="businessman-holding-pencil-big-complete-checklist-with-tick-marks_1150-35019.jpg.avif" alt="check-LIST" class="project-photo" loading="lazy">
+                <ul class="project-checklist">
+                </ul>
+            </div>
             <ul>
-                <li>Project 1: Building a personal portfolio website</li>
-                <li>Project 2: Developing a task management app</li>
-                <li>Project 3: Creating a blog platform</li>
+                <li>Project 1: Building a personal portfolio website
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 30%;">30%</div>
+                    </div>
+                </li>
+                <li>Project 2: Developing a task management app
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 50%;">50%</div>
+                    </div>
+                </li>
+                <li>Project 3: Creating a blog platform
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 10%;">10%</div>
+                    </div>
+                </li>
             </ul>
         </section>
         <section id="contact" style="display: none;">
@@ -53,7 +75,7 @@
         </section>
     </main>
     <footer>
-        <p>&copy; My Programming Journey</p>
+        <p>&copy; 2024 My Programming Journey</p>
     </footer>
     <script src="scripts.js" async defer></script>
 </body>
