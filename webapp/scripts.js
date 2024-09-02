@@ -76,7 +76,6 @@ document.querySelector('#themeToggle').addEventListener('click', function() {
     document.querySelectorAll('nav button').forEach(el => el.classList.toggle('dark-mode'));
     this.classList.toggle('dark-mode');
 
-    // Trigger scroll event to apply the correct gradient
     window.dispatchEvent(new Event('scroll'));
 });
 
@@ -85,12 +84,12 @@ window.addEventListener('scroll', () => {
     const maxScroll = document.body.scrollHeight - window.innerHeight;
     const scrollPercentage = scrollPosition / maxScroll;
 
-    const lightStartColor = [255, 111, 97]; // #ff6f61
-    const lightMidColor = [255, 140, 0]; // #ff8c00
-    const lightEndColor = [255, 75, 62]; // #ff4b3e
+    const lightStartColor = [255, 111, 97];
+    const lightMidColor = [255, 140, 0];
+    const lightEndColor = [255, 75, 62];
 
-    const darkStartColor = [26, 26, 26]; // #1a1a1a
-    const darkEndColor = [51, 51, 51]; // #333
+    const darkStartColor = [26, 26, 26];
+    const darkEndColor = [51, 51, 51];
 
     const interpolateColor = (start, end, percentage) => {
         return start.map((startValue, index) => {
